@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final-Project-1</title>
+    <meta name="author" content="Kelompok-2" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg container-fluid">
+        <div class="container">
+          <a class="navbar-brand" href="#">FAWES</a>
+          <button class="navbar-toggler border-0 rounded-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portofolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Todos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- home ============================================================================= -->
+      <div class="jumbotron p-5 bg-light vh-100 text-white text-center">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Custom jumbotron</h1>
+          <p class="col-md-8 fs-4 m-auto mb-3">
+            Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
+          </p>
+          <button class="btn btn-primary btn-lg" type="button">Example button</button>
+        </div>
+      </div>
+
+      <!-- contact ============================================================================= -->
+
+      <div class="kontak container-fluid text-white d-flex justify-content-center align-items-center w-100 p-0 p-sm-1">
+        <div class="form p-0 p-sm-3 pb-md-5">
+          <h2 class="text-center mt-4 mb-4 fw-bold fs-1">Contact Us</h2>
+          <div class="p-4 mb-5 rounded-0 bg-white">
+            <form action="">
+              <label for="name" class="form-label text-primary">Nama Lengkap</label>
+              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="name" />
+              <label for="email" class="form-label text-primary">Email</label>
+              <input type="email" class="w-100 border-0 border-bottom mb-3 p-1" id="email" />
+              <label for="number" class="form-label text-primary">Nomor Telepon</label>
+              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="number" />
+              <label for="subject" class="form-label text-primary">Subject</label>
+              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="subject" />
+              <label for="massage" class="form-label text-primary">Pesan</label>
+              <textarea class="w-100 border-0 border-bottom mb-4 p-1" id="massage" rows="1"></textarea>
+              <button type="submit" class="btn btn-primary w-100 rounded-1">KIRIM</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container-fluid bg-white">
+        <div class="container d-flex flex-column flex-lg-row justify-content-md-between p-3 border-top text-center fs-6">
+          <p class="m-0">Develop by Kelompok-2 - Program Web Developer</p>
+          <p class="m-0">Copyright &#169; 2022 Dev Team All Right Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
