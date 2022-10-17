@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final-Project-1</title>
     <meta name="author" content="Kelompok-2" />
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg container-fluid" id="navbar">
         <div class="container">
-          <a class="navbar-brand" href="#">FAWES</a>
+          <a class="navbar-brand fw-bold" href="#">GD</a>
           <button class="navbar-toggler border-0 rounded-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto text-center">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
@@ -44,19 +44,45 @@
     </header>
     <main>
       <!-- home ============================================================================= -->
-      <div class="jumbotron p-5 bg-light vh-100 text-white text-center">
-        <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-          <p class="col-md-8 fs-4 m-auto mb-3">
-            Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
-          </p>
-          <button class="btn btn-primary btn-lg" type="button">Example button</button>
+      <section>
+        <div class="jumbotron p-5 text-white text-center">
+          <div class="container py-5">
+           <div class="row justify-content-center">
+            <div class="col-12 display">
+              <h1>Gerai <span>Design</span></h1>
+              <p> Website yang bergerak dibidang jasa Digital Marketing, <br> Desain Grafis dan pembuatan Website untuk kebutuhan anda.</p>
+              <a href="#" class="btn btn-light btn-lg rounded-pill text-primary" >Contact Me</a>
+            </div>
+            <div class="col-lg-6 col-12">
+              <img src="img/hero.png" class="img-fluid mt-4" alt="">
+            </div>
+           </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- pricing ============================================================================= -->
+      <section id="pricing">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center title">
+              <h2>Our <span>Pricing</span></h2>
+              <p>Penawaran terbaik untuk anda</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- contact ============================================================================= -->
 
-      <div class="kontak container-fluid text-white d-flex justify-content-center align-items-center w-100 p-0 p-sm-1">
+      <!-- <div class="kontak container-fluid text-white d-flex justify-content-center align-items-center w-100 p-0 p-sm-1">
         <div class="form p-0 p-sm-3 pb-md-5">
           <h2 class="text-center mt-4 mb-4 fw-bold fs-1">Contact Us</h2>
           <div class="p-4 mb-5 rounded-0 bg-white">
@@ -84,7 +110,8 @@
           <p class="m-0">Copyright &#169; 2022 Dev Team All Right Reserved</p>
         </div>
       </div>
-    </footer>
-    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    </footer> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

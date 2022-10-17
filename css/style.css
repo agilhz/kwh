@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* =================================================================== */
+/* ======= root ============================================================== */
+/* =================================================================== */
+
+:root {
+  --color-1: white;
+  --color-2: rgb(80, 196, 251);
+  --color-3: rgb(12, 29, 44);
+  --gradient-1: linear-gradient(90deg, rgba(0, 115, 210, 1) 0%, rgba(1, 182, 194, 1) 100%);
+  --gradient-2: linear-gradient(90deg, rgba(1, 182, 194, 1) 1%, rgba(71, 194, 70, 1) 100%);
+  --gradient-3: linear-gradient(90deg, rgba(70, 193, 72, 1) 0%, rgba(0, 116, 210, 1) 100%);
+  --gradient-4: linear-gradient(0deg, rgba(0, 198, 255, 0.5) 0%, rgba(0, 117, 210, 0.5) 100%);
+  --gradient-5: linear-gradient(0deg, rgba(0, 198, 255, 1) 0%, rgba(0, 117, 210, 1) 100%);
+}
+
+/* =================================================================== */
+/* ======= component ============================================================== */
+/* =================================================================== */
+ .title h2{
+  color: #044581;
+  font-weight: 700;
+  font-size: 28px;
+}
+.title span{
+  font-weight: 500;
+}
+.title p{
+  font-weight: 600;
+  color: #363636;
+  font-size: 18px;
+}
+
+
+/* =======  navbar ================================ */
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  header .active{
+    background-color: white !important;
+  }
+  header .active a {
+    color: var(--color-2) !important;
+  }
+  header .active a:hover{
+    color: var(--color-2) !important;
+  }
+	header .active .nav-link:hover::after {
+		border-bottom: 3px solid var(--color-2);
+	}
+
+  .navbar{
+    background-color: transparent !important;
+  }
+  .navbar a {
+    color: var(--color-1) !important;
+  }
+  .navbar a:hover{
+    color: var(--color-1) !important;
+  }
+	.nav-link:hover::after {
+		content: '';
+		display: block;
+		border-bottom: 3px solid var(--color-1);
+		width: 100%;
+		margin: auto;
+		padding-top: 5px;
+		margin-bottom: -8px;
+	}
+}
+
+.navbar{
+  background-color: var(--color-1);
+  padding: 15px 0;
+}
+.navbar a {
+  color: var(--color-2);
+  align-items: center !important;
+}
+.nav-link {
+  text-transform: uppercase;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-navbar.active {
+	background: #f8f9fa;
+}
+
+
+/* =======  jumbotron ================================ */
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+	.jumbotron {
+    height: 1000px;
+    margin-top: -350px !important;
+  }
+  .jumbotron .display{
+    margin-top: 400px !important;
+  }
+  .jumbotron .display h1{
+    font-size: 70px;
+    font-weight: 600;
+  }
+  .jumbotron .display p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+}
+
+.jumbotron {
+  background-size: cover;
+  background-position: center;
+  background-image: url('../img/bg-image-hero.png');
+  background-repeat: no-repeat;
+  height: 1000px;
+  margin-top: -230px;
+}
+.jumbotron .display{
+  margin-top: 280px;
+}
+.jumbotron .display h1{
+  font-size: 60px;
+  font-weight: 600;
+}
+.jumbotron .display h1 span{
+  font-weight: 400;
+}
+.jumbotron .display p{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+/* =======  pricing ================================ */
+#pricing {
+  margin: 200px 0;
+}
+
+
+.kontak {
+  background: var(--gradient-4), url(../img/bg-form.jpg) center center / cover no-repeat;
+}
+
+/* =================================================================== */
+/* ======= custom size ============================================================== */
+/* =================================================================== */
+
+input,
+textarea {
+  outline: none;
+}
+.form {
+  width: 50%;
+}
+
+@media (max-width: 992px) {
+  .form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 786px) {
+  .form {
+    width: 100%;
+  }
+}
