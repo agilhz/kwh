@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final-Project-1</title>
     <meta name="author" content="Kelompok-2" />
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg container-fluid" id="navbar">
         <div class="container">
-          <a class="navbar-brand" href="#">FAWES</a>
+          <a class="navbar-brand fw-bold" href="#">GD</a>
           <button class="navbar-toggler border-0 rounded-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto text-center">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
@@ -44,47 +45,270 @@
     </header>
     <main>
       <!-- home ============================================================================= -->
-      <div class="jumbotron p-5 bg-light vh-100 text-white text-center">
-        <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-          <p class="col-md-8 fs-4 m-auto mb-3">
-            Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
-          </p>
-          <button class="btn btn-primary btn-lg" type="button">Example button</button>
-        </div>
-      </div>
-
-      <!-- contact ============================================================================= -->
-
-      <div class="kontak container-fluid text-white d-flex justify-content-center align-items-center w-100 p-0 p-sm-1">
-        <div class="form p-0 p-sm-3 pb-md-5">
-          <h2 class="text-center mt-4 mb-4 fw-bold fs-1">Contact Us</h2>
-          <div class="p-4 mb-5 rounded-0 bg-white">
-            <form action="">
-              <label for="name" class="form-label text-primary">Nama Lengkap</label>
-              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="name" />
-              <label for="email" class="form-label text-primary">Email</label>
-              <input type="email" class="w-100 border-0 border-bottom mb-3 p-1" id="email" />
-              <label for="number" class="form-label text-primary">Nomor Telepon</label>
-              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="number" />
-              <label for="subject" class="form-label text-primary">Subject</label>
-              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="subject" />
-              <label for="massage" class="form-label text-primary">Pesan</label>
-              <textarea class="w-100 border-0 border-bottom mb-4 p-1" id="massage" rows="1"></textarea>
-              <button type="submit" class="btn btn-primary w-100 rounded-1">KIRIM</button>
-            </form>
+      <section>
+        <div class="jumbotron p-5 text-white text-center">
+          <div class="container py-5">
+           <div class="row justify-content-center">
+            <div class="col-12 display">
+              <h1>Gerai <span>Design</span></h1>
+              <p> Website yang bergerak dibidang jasa Digital Marketing, <br> Desain Grafis dan pembuatan Website untuk kebutuhan anda.</p>
+              <a href="#" class="btn btn-light btn-lg rounded-pill text-primary" >Contact Me</a>
+            </div>
+            <div class="col-lg-6 col-12">
+              <img src="img/hero.png" class="img-fluid mt-4" alt="">
+            </div>
+           </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div class="container-fluid bg-white">
-        <div class="container d-flex flex-column flex-lg-row justify-content-md-between p-3 border-top text-center fs-6">
-          <p class="m-0">Develop by Kelompok-2 - Program Web Developer</p>
-          <p class="m-0">Copyright &#169; 2022 Dev Team All Right Reserved</p>
+      </section>
+
+      <!-- pricing ============================================================================= -->
+      <section class="pricing">
+        <div class="container">
+          <div class="row text-center ">
+            <div class="col-12 title">
+              <h2>Our <span>Pricing</span></h2>
+              <p>Penawaran terbaik untuk anda</p>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="custom">
+                  <h3 class="text-white py-4">BASIC</h3>
+                </div>
+                <div class="card-body">
+                  <h3 class="my-4">20 <sup>k</sup>/ <sub>Project</sub> </h3>
+                  <ul>
+                    <li>10 Grapich Content</li>
+                    <li>Design Theme</li>
+                    <li>5 Photo Product</li>
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="btn btn-custom btn-lg">Get This</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <h3 class="text-dark py-4">STANDART</h3>
+                <div class="custom-2">
+                  <div class="card-body text-white">
+                    <h3 class="my-4">20 <sup>k</sup>/ <sub>Project</sub> </h3>
+                    <ul>
+                      <li>15 Grapich Content</li>
+                      <li>Design Theme</li>
+                      <li>5 Photo Product</li>
+                      <li>Caption & Hashtag</li>
+                    </ul>
+                    <a href="#" class="btn btn-light fw-bold text-primary btn-lg mt-5">Get This</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="custom">
+                  <h3 class="text-white py-4">Premium</h3>
+                </div>
+                <div class="card-body">
+                    <h3 class="my-4">20 <sup>k</sup>/ <sub>Project</sub> </h3>
+                    <ul>
+                      <li>25 Grapich Content</li>
+                      <li>Design Theme</li>
+                      <li>10 Photo & Video</li>
+                      <li>Caption & Hashtag</li>
+                      <li>Web Landing Page</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="btn btn-custom btn-lg">Get This</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- sevices ============================================================================= -->
+      <section class="services">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12 title">
+              <h2>Our <span>Services</span></h2>
+              <p>Layanan yang kita tawarkan untuk anda</p>
+            </div>
+          </div> 
+          <div class="row justify-content-center text-center mt-4"> 
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="img/Icon-Design-1.png" alt="">
+                  <h4>Design</h4>
+                  <p>Membuat tampilan instagram anda lebih menarik</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="img/Icon-Design-2.png" alt="">
+                  <h4>Photo</h4>
+                  <p>Membuat foto untuk produk anda lebih menarik</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="img/Icon-Design-3.png" alt="">
+                  <h4>Video</h4>
+                  <p>Membuat konsep,pengambilan video dan mengedit video</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="img/Icon-Design-4.png" alt="">
+                  <h4>Caption</h4>
+                  <p>Membuat bahasa yang persuasif untuk menarik audiens</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="img/Icon-Design-5.png" alt="">
+                  <h4>Landing Page</h4>
+                  <p>Membuat halaman website untuk kepentingan marketing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact ============================================================================= -->
+      <section class="kontak">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="fw-bold text-center text-white pb-5">Contact Us</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-3 col-12">
+              <div class="card alamat">
+                <div class="card-body">
+                  <h5 class="fw-bold pb-5"> Contact Information</h5>
+                  <div class="row">
+                    <div class="col-1 mb-3">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="col-10 offset-1 mb-3">
+                      <p>Perum Telaga Murni, Jl. Semangka 1, Kab. Bekasi, Kec. CIkarang Barat 17530</p>
+                    </div>
+                    <div class="col-1 mb-3">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="col-10 offset-1 mb-3">
+                      <p>hgostline.gt@gmail.com</p>
+                    </div>
+                    <div class="col-1 mb-3">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="col-10 offset-1 mb-3">
+                      <p>0896-3124-2977</p>
+                    </div>
+                    <div class="col-lg-12 mt-5">
+                      <i class="fab fa-facebook-square"></i>
+                      <i class="fab fa-twitter"></i>
+                      <i class="fab fa-instagram"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row justify-content-end">
+                    <div class="col-lg-9 p-5">
+                      <form action="">
+                        <h3 class="fw-bold mb-5">Send a massage</h3>
+                        <div class="row">
+                          <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label text-primary">Your name</label>
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter Your name" id="name" />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="number" class="form-label text-primary">Mobile Number</label>
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter your mobile number" id="number" />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="subject" class="form-label text-primary">Subject</label>
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Subject..." id="subject" />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label text-primary">Email Address</label>
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter your email address" id="email" />
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <label for="massage" class="form-label text-primary">Write your massage here...</label>
+                          <textarea class="w-100 border-0 border-bottom mb-4 p-1" id="massage" placeholder="write your massage" rows="1"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary rounded-1">Send massage</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section>
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-lg-3 mt-3">
+              <h2 class="fw-bold title">Gerai <span>Design</span></h2>
+            </div>
+            <div class="col-lg-3 mt-3">
+              <h6 class="fw-bold">ABOUT</h6>
+              <p>Website jasa digital marketing, design grafis dan pembuatan website</p>
+            </div>
+            <div class="col-lg-6 mt-3 my-lg-auto text-lg-end">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+        </div>  
+      </section>
+
+      <section class=" bg-custom">
+        <div class="container">
+          <div class="row text-white">
+            <div class="col-lg-8 col-12 text-lg-start text-center">
+              <p class="pt-4 pb-lg-2">©Copyright GeraiDesign 2021</p>
+            </div>
+            <div class="col-6 col-lg-2 text-lg-end text-center">
+              <p class="pt-lg-4 pb-lg-2">Privacy Policy</p>
+            </div>
+            <div class="col-6 col-lg-2 text-lg-end text-center">
+              <p class="pt-lg-4 pb-2">Terms & Conditions</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </footer>
-    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
