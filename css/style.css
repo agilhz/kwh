@@ -15,6 +15,7 @@
   --color-1: white;
   --color-2: rgb(80, 196, 251);
   --color-3: rgb(12, 29, 44);
+  --color-4: #00548C;
   --gradient-1: linear-gradient(90deg, rgba(0, 115, 210, 1) 0%, rgba(1, 182, 194, 1) 100%);
   --gradient-2: linear-gradient(90deg, rgba(1, 182, 194, 1) 1%, rgba(71, 194, 70, 1) 100%);
   --gradient-3: linear-gradient(90deg, rgba(70, 193, 72, 1) 0%, rgba(0, 116, 210, 1) 100%);
@@ -46,7 +47,7 @@
   z-index: 99;
 }
 .bg-custom{
-  background: var(--gradient-4) !important;
+  background: var(--color-2) !important;
 }
 
 
@@ -187,9 +188,11 @@
   margin-bottom: 30px;
   background: transparent;
 }
+
+
 /* ======= services  ================================ */
 .sevices {
-  margin: 200px 0 100px;
+  margin: 200px 0 0;
 }
 .services .card{
   margin: 20px 10px;
@@ -205,6 +208,38 @@
   font-weight: 500;
 }
 
+
+/* ======= footer  ================================ */
+.kontak{
+  margin: 200px 0 0;
+}
+
+@media (min-width: 992px) {
+  .kontak .alamat{
+    position: absolute;
+    z-index:99;
+    width: 25%;
+    margin-top: 65px;
+  }
+}
+.kontak .alamat{
+  background: var(--color-4);
+  color:  var(--color-1);
+  padding: 20px;
+  border-radius: 10px;
+}
+.kontak i{
+  font-size: 28px;
+}
+
+/* ======= footer  ================================ */
+.kontak{
+  margin: 200px 0 0;
+}
+i{
+  font-size: 32px;
+  padding: 0 10px;
+}
 
 .kontak {
   background: url(../img/bg-form.png) center center / cover no-repeat;
