@@ -228,6 +228,9 @@
   padding: 20px;
   border-radius: 10px;
 }
+.kontak .container{
+  padding: 100px 0;
+}
 .kontak i{
   font-size: 28px;
 }
