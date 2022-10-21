@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =================================================================== */
+/* ======= root ============================================================== */
+/* =================================================================== */
+
+:root {
+  --color-1: white;
+  --color-2: rgb(80, 196, 251);
+  --color-3: rgb(12, 29, 44);
+  --color-4: #00548c;
+  --gradient-4: linear-gradient(162.05deg, #227aff 30.09%, rgba(0, 194, 255, 0.65) 85.24%);
+  --gradient-5: linear-gradient(0deg, rgba(0, 198, 255, 1) 0%, rgba(0, 117, 210, 1) 100%);
+}
+
+/* =================================================================== */
+/* ======= component ============================================================== */
+/* =================================================================== */
+.title h2 {
+  color: #044581;
+  font-weight: 700 !important;
+  font-size: 28px !important;
+}
+.title span {
+  font-weight: 500 !important;
+}
+.title p {
+  font-weight: 500 !important;
+  color: #363636 !important;
+  font-size: 18px !important;
+}
+.btn-custom {
+  color: var(--color-1);
+  background: var(--gradient-4);
+  border: none;
+  font-weight: 600;
+  z-index: 2;
+}
+.bg-custom {
+  background: var(--color-2) !important;
+}
+
+/* =======  navbar ================================ */
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  header .active {
+    background-color: white !important;
+  }
+  header .active a {
+    color: var(--color-2) !important;
+  }
+  header .active a:hover {
+    color: var(--color-2) !important;
+  }
+  header .active .nav-link:hover::after {
+    border-bottom: 3px solid var(--color-2);
+  }
+
+  .navbar {
+    background-color: transparent !important;
+    z-index: 2;
+  }
+  .navbar a {
+    color: var(--color-1) !important;
+  }
+  .navbar a:hover {
+    color: var(--color-1) !important;
+  }
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid var(--color-1);
+    width: 100%;
+    margin: auto;
+    padding-top: 5px;
+    margin-bottom: -8px;
+  }
+}
+
+.navbar {
+  background-color: var(--color-1);
+  padding: 15px 0;
+}
+.navbar a {
+  color: var(--color-2);
+  align-items: center !important;
+}
+.nav-link {
+  text-transform: uppercase;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-navbar.active {
+  background: var(--color-1);
+}
+
+/* =======  jumbotron ================================ */
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .jumbotron {
+    height: 1000px;
+    margin-top: -350px !important;
+  }
+  .jumbotron .display {
+    margin-top: 400px !important;
+  }
+  .jumbotron .display h1 {
+    font-size: 70px;
+    font-weight: 600;
+  }
+  .jumbotron .display p {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+}
+
+.jumbotron {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/bg-image-hero.png");
+  background-repeat: no-repeat;
+  height: 65em;
+  margin-top: -230px;
+}
+.jumbotron .display {
+  margin-top: 280px;
+}
+.jumbotron .display h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+.jumbotron .display h1 span {
+  font-weight: 400;
+}
+.jumbotron .display p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.img-fluid {
+  transform: translate(-50%, -75%) !important;
+}
+
+/* =======  masking ================================ */
+#mask {
+  display: none;
+}
+
+.masking {
+  width: 100vh;
+  width: 100vw;
+  z-index: 10;
+  display: none;
+}
+
+/* =======  pricing ================================ */
+
+#pricing {
+  display: none;
+}
+
+.pricing-container-1 {
+  height: 100%;
+  z-index: 15;
+}
+
+.content {
+  width: 60em;
+}
+
+#exit {
+  border-radius: 50%;
+}
+
+#exit img {
+  width: 60px;
+}
+
+.content .card {
+  border-radius: 24px !important;
+  border: none;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
+  height: 500px;
+}
+.content .custom {
+  background: var(--gradient-4);
+  border-radius: 24px 24px 0 0 !important;
+}
+.content .custom-2 {
+  background: var(--gradient-4);
+  border-radius: 0px 0px 24px 24px !important;
+  height: 500px;
+}
+.content h3 {
+  font-weight: bolder;
+  font-size: 32px;
+}
+.content ul {
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 38px;
+  margin-left: -40px;
+}
+.content .card-footer {
+  border: none;
+  margin-bottom: 30px;
+  background: transparent;
+}
+
+.card .text {
+  background: var(--gradient-4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 992px) {
+  .content-container-1 {
+    width: 100vw;
+    height: auto;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .card {
+    margin: 1em 0;
+  }
+}
+
+@media (max-width: 786px) {
+}
+
+@media (max-width: 576px) {
+}
+
+/* ======= blog  ================================ */
+.blog .card:hover {
+  box-shadow: 0px 14px 38px -9px rgba(0, 0, 0, 0.3), -1px 6px 18px -201px rgba(0, 0, 0, 0.22);
+  transition: all 0.5s;
+}
+
+.blog .card-title:hover {
+  background: var(--gradient-4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ======= Kontak ================================ */
+
+@media (min-width: 992px) {
+  .kontak .alamat {
+    position: absolute;
+    z-index: 1;
+    width: 475px;
+    margin-top: 65px;
+  }
+}
+.kontak .alamat {
+  background: var(--color-4);
+  color: var(--color-1);
+  padding: 20px;
+  border-radius: 10px;
+}
+.kontak .container {
+  padding: 100px 0;
+}
+.kontak i {
+  font-size: 28px;
+}
+
+/* ======= footer  ================================ */
+
+i {
+  font-size: 32px;
+  padding: 0 10px;
+}
+
+.kontak {
+  background: url(../img/bg-form.png) center center / cover no-repeat;
+}
+
+/* =================================================================== */
+/* ======= custom size ============================================================== */
+/* =================================================================== */
+
+input,
+textarea {
+  outline: none;
+}
+.form {
+  width: 50%;
+}
+
+@media (max-width: 992px) {
+  .form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 786px) {
+  .form {
+    width: 100%;
+  }
+}

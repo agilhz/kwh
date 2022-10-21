@@ -5,37 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final-Project-1</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="author" content="Kelompok-2" />
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg container-fluid" id="navbar" style="z-index: 2">
         <div class="container">
-          <a class="navbar-brand" href="#">FAWES</a>
+          <a class="navbar-brand fw-bold" href="#">GD</a>
           <button class="navbar-toggler border-0 rounded-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto text-center">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Portofolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#blog">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Todos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Contact</a>
+                <a class="nav-link" href="#kontak">Contact</a>
               </li>
             </ul>
           </div>
@@ -44,47 +46,305 @@
     </header>
     <main>
       <!-- home ============================================================================= -->
-      <div class="jumbotron p-5 bg-light vh-100 text-white text-center">
-        <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-          <p class="col-md-8 fs-4 m-auto mb-3">
-            Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
-          </p>
-          <button class="btn btn-primary btn-lg" type="button">Example button</button>
-        </div>
-      </div>
-
-      <!-- contact ============================================================================= -->
-
-      <div class="kontak container-fluid text-white d-flex justify-content-center align-items-center w-100 p-0 p-sm-1">
-        <div class="form p-0 p-sm-3 pb-md-5">
-          <h2 class="text-center mt-4 mb-4 fw-bold fs-1">Contact Us</h2>
-          <div class="p-4 mb-5 rounded-0 bg-white">
-            <form action="">
-              <label for="name" class="form-label text-primary">Nama Lengkap</label>
-              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="name" />
-              <label for="email" class="form-label text-primary">Email</label>
-              <input type="email" class="w-100 border-0 border-bottom mb-3 p-1" id="email" />
-              <label for="number" class="form-label text-primary">Nomor Telepon</label>
-              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="number" />
-              <label for="subject" class="form-label text-primary">Subject</label>
-              <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" id="subject" />
-              <label for="massage" class="form-label text-primary">Pesan</label>
-              <textarea class="w-100 border-0 border-bottom mb-4 p-1" id="massage" rows="1"></textarea>
-              <button type="submit" class="btn btn-primary w-100 rounded-1">KIRIM</button>
-            </form>
+      <section id="home">
+        <div class="jumbotron p-5 text-white text-center position-relative">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <div class="col-12 display">
+                <h1>Gerai <span>Design</span></h1>
+                <p>
+                  Website yang bergerak dibidang jasa Digital Marketing, <br />
+                  Desain Grafis dan pembuatan Website untuk kebutuhan anda.
+                </p>
+                <a href="#pricing" class="btn btn-light btn-lg rounded-pill text-primary mb-5" id="order-now">Order Now</a>
+              </div>
+              <div class="col-lg-6 col-12">
+                <img src="img/hero.png" class="img-fluid position-absolute top-100 start-50 p-2 p-sm-0" alt="" />
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- mask ============================================================================= -->
+      <div id="mask">
+        <div class="masking position-fixed bg-black top-0 vh-100 bg-black bg-opacity-75 d-flex align-items-center justify-content-center" id="masking"></div>
       </div>
-    </main>
-    <footer>
-      <div class="container-fluid bg-white">
-        <div class="container d-flex flex-column flex-lg-row justify-content-md-between p-3 border-top text-center fs-6">
-          <p class="m-0">Develop by Kelompok-2 - Program Web Developer</p>
-          <p class="m-0">Copyright &#169; 2022 Dev Team All Right Reserved</p>
+
+      <!-- pricing ============================================================================= -->
+
+      <section class="pricing position-relative vh-100" id="pricing">
+        <div class="pricing-container-1 container-fluid d-flex align-items-center justify-content-center p-5 position-absolute top-0">
+          <div class="pricing-container-2 bg-white pt-3 px-1 rounded-5 position-relative">
+            <button class="border-0 position-absolute top-0 start-100 translate-middle bg-white" id="exit">
+              <a href="#home"><img src="img/icon-x.svg" alt="Exit" /></a>
+            </button>
+            <div class="content">
+              <div class="container pb-3">
+                <div class="row text-center">
+                  <div class="col-12 title">
+                    <h2>Our <span>Pricing</span></h2>
+                    <p>Penawaran terbaik untuk anda</p>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <div class="custom">
+                        <h3 class="text-white py-4">BASIC</h3>
+                      </div>
+                      <div class="card-body">
+                        <h3 class="my-4">20 <sup>k</sup>/ <sub>Project</sub></h3>
+                        <ul>
+                          <li>10 Grapich Content</li>
+                          <li>Design Theme</li>
+                          <li>5 Photo Product</li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn btn-custom btn-lg">Get This</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <h3 class="text py-4">STANDART</h3>
+                      <div class="custom-2">
+                        <div class="card-body text-white">
+                          <h3 class="my-4">30 <sup>k</sup>/ <sub>Project</sub></h3>
+                          <ul>
+                            <li>15 Grapich Content</li>
+                            <li>Design Theme</li>
+                            <li>5 Photo Product</li>
+                            <li>Caption & Hashtag</li>
+                          </ul>
+                          <a href="#" class="btn btn-light fw-bold text-primary btn-lg mt-5">Get This</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <div class="custom">
+                        <h3 class="text-white py-4">Premium</h3>
+                      </div>
+                      <div class="card-body p-0 mt-3">
+                        <h3 class="my-4">50 <sup>k</sup>/ <sub>Project</sub></h3>
+                        <ul>
+                          <li>25 Grapich Content</li>
+                          <li>Design Theme</li>
+                          <li>10 Photo & Video</li>
+                          <li>Caption & Hashtag</li>
+                          <li>Web Landing Page</li>
+                        </ul>
+                      </div>
+                      <div class="card-footer pt-0">
+                        <a href="#" class="btn btn-custom btn-lg">Get This</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- blog ============================================================================= -->
+      <section class="blog mt-5 pt-5 pb-5" id="blog">
+        <div class="container">
+          <div class="row text-center d-flex justify-content-center">
+            <div class="col-12 mt-5 title">
+              <h2>Our <span>Blog</span></h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 mt-0 text-start">
+              <div class="col d-flex align-items-stretch">
+                <div class="card">
+                  <img src="/img/img-1.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body px-4">
+                    <h3 class="card-title fs-4 my-3">Simak! Ini Cara Mendapatkan Jasa Buat Website Murah Berkualitas</h3>
+                    <p class="card-text">Untuk memiliki website sendiri, Anda tidak perlu mempelajari terlebih dahulu bahasa pemrograman yang terkesan ribet tersebut...</p>
+                    <span class="date">15 Oktober 2022</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex align-items-stretch">
+                <div class="card">
+                  <img src="img/img-2.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body px-4">
+                    <h3 class="card-title fs-4 my-3">Harus Tau! 5 Keuntungan Menyewa Jasa Pembuatan Website dan SEO</h3>
+                    <p class="card-text">Jika Anda menginginkan website yang berkualitas dan teroptimasi, maka artikel ini cocok untuk Anda. Tidak sedikit yang sering...</p>
+                    <span class="date">16 Oktober 2022</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex align-items-stretch">
+                <div class="card">
+                  <img src="img/img-3.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body px-4">
+                    <h3 class="card-title fs-4 my-3">Catat! Ciri Jasa Design Web yang Profesional dan Terpercaya</h3>
+                    <p class="card-text">Website yang menarik bagi pengunjung untuk berlama-lama menikmati konten di sebuah situs tidak bisa didapatkan dari perencanaan...</p>
+                    <span class="date">17 Oktober 2022</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex align-items-stretch">
+                <div class="card">
+                  <img src="img/img-google.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body px-4">
+                    <h3 class="card-title fs-4 my-3">Cara Mudah Menghitung Biaya Google Ads untuk Promosi Bisnis Anda!</h3>
+                    <p class="card-text">Untuk para peselancar internet, pasti sering mencari suatu keyword atau kata kunci di kotak pencarian Google lalu hasil yang ditampilkan...</p>
+                    <span class="date">18 Oktober 2022</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex align-items-stretch">
+                <div class="card">
+                  <img src="img/img-5.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body px-4">
+                    <h3 class="card-title fs-4 my-3">Ini yang Membedakan Kualitas Jasa Desain Web dengan Buat Sendiri</h3>
+                    <p class="card-text">Apakah Anda pernah mengunjungi website yang memiliki konten yang menarik dan membuat Anda betah berlama-lama di website...</p>
+                    <span class="date">19 Oktober 2022</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex align-items-stretch">
+                <div class="card">
+                  <img src="img/img-6.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body px-4">
+                    <h3 class="card-title fs-4 my-3">Berikut Ciri Jasa Pembuat Website yang Profesional dan Terpercaya</h3>
+                    <p class="card-text">Perkembangan teknologi yang semakin pesat tentu perlu terus diikuti oleh para pebisnis agar bisa menembus pasarnya. Teknologi...</p>
+                    <span class="date">20 Oktober 2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact ============================================================================= -->
+      <section class="kontak mt-4" id="kontak">
+        <div class="container p-3 p-sm-0">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="fw-bold text-center text-white pt-5 pb-4">Contact Us</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center pb-5">
+            <div class="col-xl-3 col-lg-4 col-12 m-0">
+              <div class="card alamat">
+                <div class="card-body">
+                  <h5 class="fw-bold pb-5">Contact Information</h5>
+                  <div class="row">
+                    <div class="col-1 mb-3">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="col-10 offset-1 mb-3">
+                      <p>Perum Telaga Murni, Jl. Semangka 1, Kab. Bekasi, Kec. CIkarang Barat 17530</p>
+                    </div>
+                    <div class="col-1 mb-3">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="col-10 offset-1 mb-3">
+                      <p>hgostline.gt@gmail.com</p>
+                    </div>
+                    <div class="col-1 mb-3">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="col-10 offset-1 mb-3">
+                      <p>0896-3124-2977</p>
+                    </div>
+                    <div class="col-lg-12 mt-5">
+                      <i class="fab fa-facebook-square"></i>
+                      <i class="fab fa-twitter"></i>
+                      <i class="fab fa-instagram"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row justify-content-end">
+                    <div class="col-lg-9 p-5">
+                      <form action="">
+                        <h3 class="fw-bold mb-5">Send a massage</h3>
+                        <div class="row">
+                          <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label text-primary">Your name</label>
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter Your name" id="name" />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="number" class="form-label text-primary">Mobile Number</label>
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter your mobile number" id="number" />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="subject" class="form-label text-primary">Subject</label>
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Subject..." id="subject" />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label text-primary">Email Address</label>
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter your email address" id="email" />
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <label for="massage" class="form-label text-primary">Write your massage here...</label>
+                          <textarea class="w-100 border-0 border-bottom mb-4 p-1" id="massage" placeholder="write your massage" rows="1"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary rounded-1">Send massage</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section id="about">
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-lg-3 mt-3">
+              <h2 class="fw-bold title">Gerai <span>Design</span></h2>
+            </div>
+            <div class="col-lg-4 mt-3">
+              <h6 class="fw-bold">ABOUT</h6>
+              <p>
+                Gerai Design adalah agensi pengembang website dan software house ternama yang terletak di kota Bekasi, Indonesia. Kami telah berpengalaman merancang, mengembangkan, serta menyediakan website kustom, sistem informasi,
+                berbagai plugins, aplikasi mobile dan strategi pemasaran digital untuk berbagai pelanggan di seluruh Dunia
+              </p>
+            </div>
+            <div class="col-lg-5 mt-3 my-lg-auto text-lg-end">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-custom">
+        <div class="container">
+          <div class="row text-white">
+            <div class="col-lg-8 col-12 text-lg-start text-center">
+              <p class="pt-4 pb-lg-2">©Copyright GeraiDesign 2021</p>
+            </div>
+            <div class="col-6 col-lg-2 text-lg-end text-center">
+              <p class="pt-lg-4 pb-lg-2">Privacy Policy</p>
+            </div>
+            <div class="col-6 col-lg-2 text-lg-end text-center">
+              <p class="pt-lg-4 pb-2">Terms & Conditions</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </footer>
-    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
