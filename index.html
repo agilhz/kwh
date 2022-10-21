@@ -150,8 +150,27 @@
         </div>
       </section>
 
+      <!-- about ============================================================================= -->
+      <section id="about">
+        <div class="p-5 text-white text-center">
+          <div class="container py-5">
+            <div class="row">
+              <div class="col-12 mt-5 title">
+                <h2>About <span>Us</span></h2>
+              </div>
+              <div class="row row-cols-1 row-cols-md-2">
+                <div class="col">
+                  <h1></h1>
+                </div>
+                <div class="col"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- blog ============================================================================= -->
-      <section class="blog mt-5 pt-5 pb-5" id="blog">
+      <section class="blog mt-5 pb-5" id="blog">
         <div class="container">
           <div class="row text-center d-flex justify-content-center">
             <div class="col-12 mt-5 title">
@@ -224,7 +243,7 @@
       </section>
 
       <!-- contact ============================================================================= -->
-      <section class="kontak mt-4" id="kontak">
+      <section class="kontak" id="kontak">
         <div class="container p-3 p-sm-0">
           <div class="row">
             <div class="col-12">
@@ -269,31 +288,31 @@
                 <div class="card-body">
                   <div class="row justify-content-end">
                     <div class="col-lg-9 p-5">
-                      <form action="">
+                      <form action="https://formspree.io/f/mknevylp" method="POST">
                         <h3 class="fw-bold mb-5">Send a massage</h3>
                         <div class="row">
                           <div class="col-md-6 mb-3">
                             <label for="name" class="form-label text-primary">Your name</label>
-                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter Your name" id="name" />
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter Your name" id="name" name="name" />
                           </div>
                           <div class="col-md-6 mb-3">
                             <label for="number" class="form-label text-primary">Mobile Number</label>
-                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter your mobile number" id="number" />
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter your mobile number" id="number" name="number" />
                           </div>
                           <div class="col-md-6 mb-3">
                             <label for="subject" class="form-label text-primary">Subject</label>
-                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Subject..." id="subject" />
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Subject..." id="subject" name="subject" />
                           </div>
                           <div class="col-md-6 mb-3">
                             <label for="email" class="form-label text-primary">Email Address</label>
-                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter your email address" id="email" />
+                            <input type="text" class="w-100 border-0 border-bottom mb-3 p-1" placeholder="Enter your email address" id="email" name="email" />
                           </div>
                         </div>
                         <div class="col-12 mb-3">
-                          <label for="massage" class="form-label text-primary">Write your massage here...</label>
-                          <textarea class="w-100 border-0 border-bottom mb-4 p-1" id="massage" placeholder="write your massage" rows="1"></textarea>
+                          <label for="message" class="form-label text-primary">Write your message here...</label>
+                          <textarea class="w-100 border-0 border-bottom mb-4 p-1" id="massage" placeholder="write your massage" rows="1" name="message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary rounded-1">Send massage</button>
+                        <button type="submit" class="btn btn-primary rounded-1">Send message</button>
                       </form>
                     </div>
                   </div>
@@ -306,7 +325,7 @@
     </main>
 
     <footer>
-      <section id="about">
+      <section id="">
         <div class="container my-5">
           <div class="row">
             <div class="col-lg-3 mt-3">
