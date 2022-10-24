@@ -310,6 +310,35 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* ======= todos ================================ */
+.todos i {
+font-size: 12px;
+}
+.todos .card{
+  border: none;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
+}
+
+.todos .row-todos{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+}
+.todos .completed span{
+  color: greenyellow !important;
+}
+.list-left {
+  grid-column: 1/2;
+}
+
+.list-center {
+  grid-column: 2/3;
+}
+
+.list-right {
+  grid-column: 3/4;
+}
+
 /* ======= Kontak ================================ */
 
 @media (min-width: 992px) {

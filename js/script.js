@@ -84,3 +84,113 @@ function scrolling() {
   imageWrapper.style.left = `-${totalScroll * widthEl}px`;
   imageWrapper.style.transition = ".3s";
 }
+
+
+
+// todo list
+
+      const newTodoForm = document.querySelector('#tambah-todo');
+      const todoList = document.querySelector('.todo-list');
+      let todos = JSON.parse(localStorage.getItem('todos') || '[]');
+
+      function init() {
+        newTodoForm.addEventListener('submit', newTodo);
+        updateList();
+      }
+      
+      function* index() {
+        let i = todos.length;
+
+        while(true) {
+          yield i;
+
+          i = i + 1;
+        }
+      }
+
+      function createTodo({ content = '', completed = false } = {}) {
+        const id = index().next().value;
+
+        return {
+          id: id,
+          date: new Date().toLocaleDateString(),
+          content: content,
+          complete: completed,
+        };
+      }
+
+      function newTodo(e) {
+        e.preventDefault();
+
+        const newTodoContentInput = this.querySelector('[name="new-todo-content"]')
+        const content = newTodoContentInput.value || '';
+
+        if (content.length === 0) {
+          return;
+        }
+
+        const newTodo = createTodo({ content: content });
+
+        const newTodos = [...todos, newTodo];
+
+        newTodoContentInput.value = '';
+        updateTodos(newTodos);
+      }
+
+      function removeTodo(e) {
+        e.preventDefault();
+        if (!this.parentNode && !this.parentNode.dataset && !this.parentNode.dataset.id) {
+          return;
+        }
+        
+        const id = +this.parentNode.dataset.id;
+        const newTodos = todos.filter(todo => todo.id !== id);
+        
+        updateTodos(newTodos);
+      }
+
+      function toggleComplete(e) {
+        if (!this.parentNode && !this.parentNode.dataset && !this.parentNode.dataset.id) {
+          return;
+        }
+
+        const id = +this.parentNode.dataset.id;
+        const newTodos = todos.slice();
+        newTodos[id] = { ...newTodos[id], complete: this.checked };
+
+        updateTodos(newTodos);
+      }
+
+      function updateTodos(newTodos) {
+        todos = newTodos;
+        localStorage.setItem('todos', JSON.stringify(todos));
+
+        updateList();
+      }
+
+      function updateList() {
+        let content = todos.map(todo => {
+          return `
+            <div class="card row justify-content-between mb-2">
+            <div class="card-body row-todos justify-content-between todo-list-item justify-content-lg-between ${ todo.complete ? 'completed' : '' }" data-id="${ todo.id }">
+              <input class="check list-left" type="checkbox" ${ todo.complete ? 'checked' : '' } />
+              <div class="list-center">
+                <span>${ todo.content }</span> <br>
+                <small class="text-muted">${ todo.date }</small>
+              </div>
+                <button class="hapus-todo btn btn-danger list-right" type="button"><i class="fas fa-times"></i></button>
+            </div>
+            </div>
+          `;
+        }).join('');
+
+        todoList.innerHTML = content;
+
+        const deleteButtons = todoList.querySelectorAll('.hapus-todo');
+        deleteButtons.forEach(button => button.addEventListener('click', removeTodo));
+
+        const completedCheckboxes = todoList.querySelectorAll('input[type="checkbox"]');
+        completedCheckboxes.forEach(checkbox => checkbox.addEventListener('click', toggleComplete));
+      }
+
+      init();
