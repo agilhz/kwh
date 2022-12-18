@@ -17,6 +17,7 @@
   --color-4: #00548c;
   --gradient-4: linear-gradient(162.05deg, #227aff 30.09%, rgba(0, 194, 255, 0.65) 85.24%);
   --gradient-5: linear-gradient(0deg, rgba(0, 198, 255, 1) 0%, rgba(0, 117, 210, 1) 100%);
+  --gradient-6: linear-gradient(0deg, rgba(0, 198, 255, 1) 0%, #227aff 100%);
 }
 
 /* =================================================================== */
@@ -64,7 +65,6 @@
 
   .navbar {
     background-color: transparent !important;
-    z-index: 2;
   }
   .navbar a {
     color: var(--color-1) !important;
@@ -104,7 +104,7 @@
 
 /* =======  jumbotron ================================ */
 /*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .jumbotron {
     height: 1000px;
     margin-top: -350px !important;
@@ -121,16 +121,16 @@
     font-weight: 400;
     line-height: 45px;
   }
+
+  .home img {
+    width: 50% !important;
+  }
 }
 
-.jumbotron {
-  background-size: cover;
-  background-position: center;
-  background-image: url("../img/bg-image-hero.png");
-  background-repeat: no-repeat;
-  height: 65em;
-  margin-top: -230px;
+.home {
+  background: var(--gradient-6);
 }
+
 .jumbotron .display {
   margin-top: 280px;
 }
@@ -144,10 +144,6 @@
 .jumbotron .display p {
   font-size: 24px;
   font-weight: 400;
-}
-
-.img-fluid {
-  transform: translate(-50%, -75%) !important;
 }
 
 /* =======  masking ================================ */
@@ -312,19 +308,19 @@
 
 /* ======= todos ================================ */
 .todos i {
-font-size: 12px;
+  font-size: 12px;
 }
-.todos .card{
+.todos .card {
   border: none;
   box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
 }
 
-.todos .row-todos{
+.todos .row-todos {
   display: grid;
   grid-template-columns: auto auto auto;
   text-align: center;
 }
-.todos .completed span{
+.todos .completed span {
   color: greenyellow !important;
 }
 .list-left {
